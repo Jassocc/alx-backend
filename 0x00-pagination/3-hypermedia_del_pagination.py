@@ -44,8 +44,8 @@ class Server:
         gets info of a page from a specified index
         """
         data_set = self.indexed_dataset()
-        assert index is not None and index >= 0
-        and index <= max(data_set.keys())
+        assert index is not None and index >= 0 and index <= max(
+                data_set.keys())
         data_p = []
         counter = 0
         next_idx = None
