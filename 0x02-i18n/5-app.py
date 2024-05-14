@@ -10,7 +10,7 @@ app = Flask(__name__)
 babel = Babel(app)
 
 
-sers = {
+users = {
     1: {"name": "Balou", "locale": "fr", "timezone": "Europe/Paris"},
     2: {"name": "Beyonce", "locale": "en", "timezone": "US/Central"},
     3: {"name": "Spock", "locale": "kg", "timezone": "Vulcan"},
@@ -68,7 +68,7 @@ def before_request():
     """
     used as a decorator
     """
-    flask.g.user = get_user()
+    g.user = get_user()
 
 
 if __name__ == '__main__':
