@@ -58,9 +58,9 @@ def get_user():
     """
     log = request.args.get('login_as')
     if log:
-        return users[int(log)]
-    else
-    return None
+        return users.get(int(log))
+    else:
+        return None
 
 
 @app.before_request
@@ -68,7 +68,7 @@ def before_request():
     """
     used as a decorator
     """
-    g.user = get_user()
+    flask.g.user = get_user()
 
 
 if __name__ == '__main__':
