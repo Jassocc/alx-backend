@@ -27,7 +27,7 @@ def indexing():
     """
     index route and func
     """
-    return render_template('2-index.html')
+    return render_template('3-index.html')
 
 
 @babel.localeselector
